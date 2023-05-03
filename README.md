@@ -140,7 +140,15 @@ Install this project with:
 
 ```sh
   cd Blog-App
+```
+```sh
   gem install
+```
+```sh
+  bundle install
+```
+```sh
+  npm install
 ```
 
 ### Usage
