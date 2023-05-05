@@ -169,10 +169,8 @@ or
 
 To run tests, run the following command:
 
-Example command:
-
 ```sh
-  bin/rails test test/models/article_test.rb
+  bundle exec rspec
 ```
 
 <!-- ### Deployment
