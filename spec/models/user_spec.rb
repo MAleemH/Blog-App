@@ -19,5 +19,5 @@ RSpec.describe User, type: :model do
       user.posts_counter = 2
       expect(user).to be_valid
     end
-  end 
+  end
 end
