@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Posts", type: :request do
+RSpec.describe 'Posts', type: :request do
   describe 'GET /users/:id/posts' do
     it 'returns a successful response' do
       get '/users/:id/posts'
