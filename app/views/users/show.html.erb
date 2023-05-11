@@ -24,7 +24,13 @@
 
 <%# user posts %>
 
+<% @user.recent_post.each do |post| %>
 <div class='user-posts'>
-    <p class='post-title'>Post</p>
-    <p class='post-details'>lorem</p>
+    <p class='post-title'>
+        <%= post.title %>
+    </p>
+    <p class='post-details'>
+        <%= post.text %>
+    </p>
 </div>
+<% end %>
