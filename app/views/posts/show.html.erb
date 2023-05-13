@@ -1,1 +1,26 @@
-<h1>Here are details of a post by user</h1>
+<div class='post-data'>
+    <div class='post-header'>
+        <p class='post-title'>
+            <%= @post.title %> by <%= @post.author.name %>
+        </p>
+        <p class='comments-and-likes base'>
+            Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %>
+        </p>
+    </div>
+    <p>
+        <%= @post.text %>
+    </p>
+</div>
+
+<div class='comments-section'>
+    <% if @post.comments.blank? %>
+        <p>No comments!</p>
+    <% else %>
+
+    <% @post.comments.each do |comment| %>
+        <p>
+            <strong><%= comment.author.name %>:</strong> <%= comment.text %>
+        </p>
+    <% end %>
+    <% end %>
+</div>

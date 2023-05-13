@@ -13,3 +13,125 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  margin: 20px 40px;
+}
+
+.user-data {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.image-box {
+  height: 125px;
+  width: 125px;
+  background: #219ebc;
+}
+
+.user-image {
+  height: 100%;
+  width: 100%;
+}
+
+.details-box {
+  border: 1px solid black;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.user-name {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  align-self: center;
+}
+
+.no-of-posts {
+  margin: 0;
+  align-self: flex-end;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.user-bio {
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.user-posts {
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.bio-title,
+.post-title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.bio-details,
+.post-details {
+  margin: 15px 0 0 0;
+}
+
+.comments-and-likes {
+  text-align: end;
+  margin: 0;
+  font-size: small;
+}
+
+.posts-button,
+.pagination {
+  text-align: center;
+}
+
+.view-posts-button,
+.pagination-button {
+  border-radius: 5px;
+  width: 110px;
+  height: 40px;
+  border: 1px solid gray;
+}
+
+.comments-section {
+  border: 1px solid black;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.comments-section p {
+  margin: 0;
+}
+
+.post-data {
+  border: 1px solid black;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.post-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 30px;
+}
+
+.post-header p {
+  margin: 0;
+}
+
+.base {
+  align-self: flex-end;
+}
