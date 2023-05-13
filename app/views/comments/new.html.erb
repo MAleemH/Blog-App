@@ -1,14 +1,10 @@
 <section id='form'>
-    <%= form_with model: @post, url: user_posts_path do |form| %>
+    <%= form_with model: @comment, url: user_post_comments_path do |form| %>
         <div class='add-post-form'>
-            <%= form.label :title %>
-            <%= form.text_field :title, required: true %>
-
             <%= form.label :text %>
             <%= form.text_area :text, cols: 30, rows: 10, required: true %>
 
-            <%= form.submit "Create Post" %>
+            <%= form.submit "Add Comment" %>
         <div>
     <% end %>
 </section>
-
