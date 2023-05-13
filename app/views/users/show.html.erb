@@ -32,5 +32,12 @@
     <p class='post-details'>
         <%= post.text %>
     </p>
+    <p class='comments-and-likes'>Comment(s): <%= post.comments_counter %>, Like(s): <%= post.likes_counter %></p>
 </div>
 <% end %>
+
+<div class='posts-button'>
+    <button class='view-posts-button'>
+        <%= link_to "See all posts", user_posts_path(@user) %>
+    </button>
+</div>
