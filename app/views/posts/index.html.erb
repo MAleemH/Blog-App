@@ -33,7 +33,7 @@
         <p>No comments!</p>
     <% else %>
 
-    <% post.recent_comments.each do |comment| %>
+    <% post.recent_comments.includes(:author).each do |comment| %>
         <p>
             <strong><%= comment.author.name %>:</strong> <%= comment.text %>
         </p>

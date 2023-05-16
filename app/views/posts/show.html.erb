@@ -17,7 +17,7 @@
         <p>No comments!</p>
     <% else %>
 
-    <% @post.comments.each do |comment| %>
+    <% @post.comments.includes(:author).each do |comment| %>
         <p>
             <strong><%= comment.author.name %>:</strong> <%= comment.text %>
         </p>
