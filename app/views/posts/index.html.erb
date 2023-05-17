@@ -14,7 +14,7 @@
 
 <%# user posts %>
 
-<% @posts.each do |post| %>
+<% @posts.includes(:comments, :author).each do |post| %>
 <div class='user-posts'>
     <p class='post-title'>
         <%= link_to post.title, user_post_path(post.author, post) %>
