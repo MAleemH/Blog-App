@@ -21,14 +21,14 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   host: localhost
-  username: blogapp
-  password: blogapp
+  username: postgres
+  password: Gojetassj4##
 
 development:
   <<: *default
   database: Blog_App_development
-  username: blogapp
-  password: blogapp
+  username: postgres
+  password: Gojetassj4##
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -63,8 +63,8 @@ development:
 test:
   <<: *default
   database: Blog_App_test
-  username: blogapp
-  password: blogapp
+  username: postgres
+  password: Gojetassj4##
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -89,5 +89,5 @@ test:
 production:
   <<: *default
   database: Blog_App_production
-  username: blogapp
-  password: blogapp
+  username: postgres
+  password: Gojetassj4##
