@@ -16,15 +16,10 @@ RSpec.describe 'Post Index', type: :feature do
     @like = Like.create(post_id: @forth_post.id, author_id: @user.id)
     visit user_posts_path @user.id
   end
-
-
-
+  
   it 'I can see the users profile picture' do
     expect(page).to have_css("img[src*='https://unsplash.com/photos/F_-0BxGuVvo']")
   end
-
-
-
 
   it 'I can see the users username' do
     expect(page).to have_content('Lilly')
