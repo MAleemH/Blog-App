@@ -64,10 +64,4 @@ RSpec.describe 'Post Index', type: :feature do
     click_link @forth_post.title
     expect(current_path).to eq user_post_path(@user, @forth_post)
   end
-
-
-
-
-
-  
 end
