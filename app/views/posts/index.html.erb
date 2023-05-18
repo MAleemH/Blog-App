@@ -14,7 +14,7 @@
 
 <%# user posts %>
 
-<% @posts.each do |post| %>
+<% @posts.includes(:comments, :author).each do |post| %>
 <div class='user-posts'>
     <p class='post-title'>
         <%= link_to post.title, user_post_path(post.author, post) %>
@@ -33,7 +33,7 @@
         <p>No comments!</p>
     <% else %>
 
-    <% post.recent_comments.each do |comment| %>
+    <% post.recent_comments.includes(:author).each do |comment| %>
         <p>
             <strong><%= comment.author.name %>:</strong> <%= comment.text %>
         </p>
