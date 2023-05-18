@@ -163,3 +163,24 @@ a {
   background-color: rgb(221, 218, 218);
   border: 1px solid black;
 }
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-field {
+  width: 300px;
+}
+
+.login-button {
+  width: 305px;
+}
