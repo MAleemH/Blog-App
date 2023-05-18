@@ -17,9 +17,14 @@ RSpec.describe 'Post Index', type: :feature do
     visit user_posts_path @user.id
   end
 
+
+
   it 'I can see the users profile picture' do
     expect(page).to have_css("img[src*='https://unsplash.com/photos/F_-0BxGuVvo']")
   end
+
+
+
 
   it 'I can see the users username' do
     expect(page).to have_content('Lilly')
@@ -59,4 +64,10 @@ RSpec.describe 'Post Index', type: :feature do
     click_link @forth_post.title
     expect(current_path).to eq user_post_path(@user, @forth_post)
   end
+
+
+
+
+
+  
 end
