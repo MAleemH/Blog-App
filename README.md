@@ -173,8 +173,6 @@ Example:
 - Twitter: [@ahroniy](https://twitter.com/ahroniy)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ahroniy/) 
 
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
