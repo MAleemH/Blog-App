@@ -9,6 +9,9 @@
     </div>
     <p>
         <%= @post.text %>
+        <% if can? :destroy, @post %>
+            <%= button_to "Delete", user_post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
     </p>
 </div>
 
