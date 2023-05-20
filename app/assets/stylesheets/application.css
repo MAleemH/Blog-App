@@ -111,6 +111,14 @@ a {
   padding: 10px;
 }
 
+.comments {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 5px;
+}
+
 .comments-section p {
   margin: 0;
 }
@@ -153,15 +161,26 @@ a {
 
 .like-comment {
   display: flex;
+  align-items: center;
   gap: 10px;
+  margin-bottom: 10px;
 }
 
 .add-comment-btn {
-  height: 40px;
-  width: 70px;
+  height: 20px;
+  width: 120px;
   padding: 5px;
   background-color: rgb(221, 218, 218);
   border: 1px solid black;
+  text-align: center;
+}
+
+.like-button {
+  height: 31px;
+}
+
+.like-button:hover {
+  cursor: pointer;
 }
 
 .login-form {
@@ -183,4 +202,13 @@ form {
 
 .login-button {
   width: 305px;
+}
+
+button {
+  width: 70px;
+  height: 30px;
+}
+
+button:hover {
+  cursor: pointer;
 }
