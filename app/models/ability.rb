@@ -5,7 +5,7 @@ class Ability
     user ||= User.new # Guest user
 
     # Define abilities for different user roles
-    if user.role == "admin"
+    if user.role == 'admin'
       can :manage, :all
     else
       can :destroy, Post, author: user

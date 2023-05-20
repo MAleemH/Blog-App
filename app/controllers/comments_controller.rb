@@ -23,7 +23,7 @@ class CommentsController < ApplicationController
     @post.save
     @comment.destroy!
 
-    redirect_to user_post_path(id: @post.id), notice: "Comment was successfully deleted."
+    redirect_to user_post_path(id: @post.id), notice: 'Comment was successfully deleted.'
   end
 
   private
