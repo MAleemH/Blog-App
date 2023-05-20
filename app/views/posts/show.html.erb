@@ -9,20 +9,10 @@
     </div>
     <p>
         <%= @post.text %>
+        <% if can? :destroy, @post %>
+            <%= button_to "Delete", user_post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
     </p>
-</div>
-
-<div class='comments-section'>
-    <% if @post.comments.blank? %>
-        <p>No comments!</p>
-    <% else %>
-
-    <% @post.comments.includes(:author).each do |comment| %>
-        <p>
-            <strong><%= comment.author.name %>:</strong> <%= comment.text %>
-        </p>
-    <% end %>
-    <% end %>
 </div>
 
 <div class='like-comment'>
@@ -34,7 +24,25 @@
     <%# like %>
 
     <%= form_with model: @like, url: user_post_likes_path(post_id: @post.id) do |f| %>
-        <%= f.submit "Like" %>
+        <%= f.submit "Like", class: 'like-button' %>
     <% end %>
 
+</div>
+
+<div class='comments-section'>
+    <% if @post.comments.blank? %>
+        <p>No comments!</p>
+    <% else %>
+
+    <% @post.comments.includes(:author).each do |comment| %>
+        <div class='comments'>
+            <p>
+                <strong><%= comment.author.name %>:</strong> <%= comment.text %>
+            </p>
+            <% if can? :destroy, comment %>
+                <%= button_to "Delete", new_user_post_comment_path(comment.author, comment.post, comment), method: :delete, data: { confirm: 'Are you sure?' }, params: { comment_id: comment.id } %>
+            <% end %>
+        </div>
+    <% end %>
+    <% end %>
 </div>
